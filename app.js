@@ -70,17 +70,46 @@
 // 	});
 // });
 
-// マウスクリックイベントの記述
-$(function(){
-	$('.box1').on('click',function(){
-		$('.box1').addClass('box1-ext');
-	});
+// // マウスクリックイベントの記述
+// $(function(){
+// 	$('.box1').on('click',function(){
+// 		$('.box1').addClass('box1-ext');
+// 	});
 
-	$('.box1').mouseout(function(){
-		$('.box1').removeClass('box1-ext');
+// 	$('.box1').mouseout(function(){
+// 		$('.box1').removeClass('box1-ext');
+// 	});
+// });
+
+// // クリックしたらスライドアップして消えていくthisを使わない方法
+// $(function(){
+// 	$('.bg1').on('click',function(){
+// 		$('.bg1').slideUp();
+// 	});
+// 	$('.bg2').on('click',function(){
+// 		$('.bg2').slideUp();
+// 	});
+// 	$('.bg3').on('click',function(){
+// 		$('.bg3').slideUp();
+// 	});
+// 	$('.bg4').on('click',function(){
+// 		$('.bg4').slideUp();
+// 	});
+// });
+
+// // this(クリックされた要素）を使用してまとめてイベントを記述する方法
+// $(function(){
+// 	$('.box1').on('click',function(){
+// 		$(this).slideUp();
+// 	});
+// });
+
+// ボタンがクリックされた時ul要素の小要素をCSSで赤くする。
+$(function(){
+	$('button').on('click',function(){
+		$('ul').children().css('color','red');
 	});
 });
-
 
 
 
